@@ -219,7 +219,7 @@ button.main-button:hover {
 
 .center-heading h2 em {
   font-style: normal;
-  color: #f4813f;
+  color: #32e27f;
 }
 
 .center-heading p {
@@ -680,7 +680,7 @@ welcome
 
 .welcome-area .header-text h1 em {
   font-style: normal;
-  color: #fba70b;
+  color: #32e27f;
 }
 
 .welcome-area .header-text p {
@@ -754,10 +754,13 @@ about
 @media (max-width: 992px) {
   .features-item {
     margin-bottom: 45px;
+    width: 992px;
   }
 }
 
 .features-item {
+  width: 350px;
+  height: 450px;
   border-radius: 5px;
   padding: 60px 30px;
   text-align: center;
@@ -1060,7 +1063,7 @@ footer .right-content {
 
 .footer-content .right-content h2 em {
   font-style: normal;
-  color: #fba70b;
+  color: #32e27f;
 }
 
 .footer-content .right-content p {
