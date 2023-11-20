@@ -774,7 +774,7 @@ about
   left: 45px;
   font-size: 70px;
   font-weight: 600;
-  color: #fdefe9;
+  color: #54260e;
 }
 
 .features-item img {
@@ -854,6 +854,18 @@ promotion
 testimonials
 --------------------------------------------
 */
+
+.logo-img{
+  margin-top: 12px;
+  width: 90px;
+  height: 90px;
+}
+
+.logo-img2022{
+  width: 85px;
+  height: 105px;
+}
+
 .right-image-decor {
   background-image: url(../images/right-bg-decor.png);
   background-repeat: no-repeat;
