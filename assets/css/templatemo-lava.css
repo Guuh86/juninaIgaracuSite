@@ -77,6 +77,20 @@ header, nav, section, article, aside, footer, hgroup {
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid white;  /* creates padding around scroll thumb */
+}
+
 html, body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -606,7 +620,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #fba70b!important;
+    color: blue !important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -889,11 +903,12 @@ testimonials
 
 #testimonials .item .testimonial-content {
   background: #32e27f;
-  background: linear-gradient(145deg, white 0%, blue 100%);
+  background: #32e27f;
   margin-left: 60px;
   padding: 40px 30px;
   text-align: center;
   border-radius: 5px;
+  border: 1px solid black; 
 }
 
 #testimonials .item .testimonial-content ul li {
@@ -943,7 +958,8 @@ testimonials
   text-align: center;
   display: inline-block;
   background: #32e27f;
-  background: linear-gradient(145deg, white 0%, blue 100%);
+  background: #32e27f;
+  border: 1px solid black;
   position: absolute;
 }
 
@@ -960,7 +976,8 @@ testimonials
   text-align: center;
   display: inline-block;
   background: #32e27f;
-  background: linear-gradient(145deg, white 0%, blue 100%);
+  background: #32e27f;
+  border: 1px solid black;
   position: absolute;
 }
 
@@ -1087,7 +1104,7 @@ footer .right-content {
 }
 
 .footer-content .right-content a:hover {
-  color: #FC3;
+  color: white;
 }
 
 footer .social {
@@ -1122,8 +1139,8 @@ footer .social li a {
 }
 
 footer .social li a:hover {
-  background-color: #fba70b;
-  border-color: #fba70b;
+  background-color: #32e27f;
+  border-color: #32e27f;
   color: #fff;
 }
 
@@ -1147,7 +1164,7 @@ footer .sub-footer a {
 }
 
 footer .sub-footer a:hover {
-	color: #FC3;
+	color: #32e27f;
 }
 
 footer .sub-footer p {
@@ -1173,7 +1190,7 @@ preloader
 */
 #preloader {
   overflow: hidden;
-  background-image: linear-gradient(145deg, #f4813f 0%, #f1556a 100%);
+  background-image: linear-gradient(145deg, white 0%, #32e27f 100%);
   left: 0;
   right: 0;
   top: 0;
