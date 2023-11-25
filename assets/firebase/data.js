@@ -1,6 +1,25 @@
-import { loadData } from "./app.js";
+import { loadData, saveFocusNotice } from "./app.js";
 
 const container = document.getElementById('container');
+
+const form = document.getElementById('form');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    let title = form['title'].value;
+    let desc = form['desc'].value;
+    let image = form['image'].value;
+    let link = form['link'].value;
+
+    try {
+        await saveFocusNotice(title, desc, image, link);
+        form.reset();
+        alert('SUCESSO! Notícia enviada com sucesso.');
+    } catch(error) {
+        console.log(error);
+    }
+})
 
 window.addEventListener('DOMContentLoaded', async (e) => {
     loadData((querySnapshot) => {
@@ -11,12 +30,12 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             console.log(task);
 
             container.innerHTML += `
-            <div class="card card-body mt-2 border-primary">
-            <h3 class="h5">${task.name}</h3>
-            <h3 class="h5">${task.phone}</h3>
-            <h3 class="h5">${task.email}</h3>
-            <h3 class="h5">${task.address}</h3>
-            </div>
+    <tr>
+      <td>${task.name}</td>
+      <td>${task.phone}</td>
+      <td>${task.email}</td>
+      <td>${task.address}</td>
+    </tr>
             `
         });
     });

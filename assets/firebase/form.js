@@ -1,4 +1,4 @@
-import { saveData, loadData } from "./app.js";
+import { saveData } from "./app.js";
 
 const form = document.getElementById('form');
 

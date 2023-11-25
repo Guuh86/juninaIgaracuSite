@@ -19,7 +19,7 @@ const db = getFirestore();
 
 export const saveData = (nome, email, phone, address) => {
     try {
-        addDoc(collection(db, "users"), {
+        const doc = addDoc(collection(db, "users"), {
           name: nome,
           email: email,
           phone: phone,
@@ -30,7 +30,20 @@ export const saveData = (nome, email, phone, address) => {
       }
 }
 
-export const saveNotice = (title, desc, image, link) => {
+export const saveFocusNotice = (title, desc, image, link) => {
+  try {
+    const doc = addDoc(collection(db, "newsFocus"), {
+      title: title,
+      desc: desc,
+      image: image,
+      link: link
+    })
+  } catch(error){
+    console.error("Erro ao adicionar notícia" ,error);
+  }
+}
+
+export const saveNormalNotice = (title, desc, image, link) => {
   try {
     addDoc(collection(db, "news"), {
       title: title,
@@ -45,5 +58,9 @@ export const saveNotice = (title, desc, image, link) => {
 
 export const loadData = (callback) => {
     onSnapshot(collection(db, 'users'), callback);
+}
+
+export const loadFocusNotice = (callback) => {
+  onSnapshot(collection(db, 'newsFocus'), callback);
 }
 
