@@ -64,3 +64,7 @@ export const loadFocusNotice = (callback) => {
   onSnapshot(collection(db, 'newsFocus'), callback);
 }
 
+export const loadNormalNotice = (callback) => {
+  onSnapshot(collection(db, 'news'), callback);
+}
+

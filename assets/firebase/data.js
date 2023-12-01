@@ -1,8 +1,10 @@
-import { loadData, saveFocusNotice } from "./app.js";
+import { loadData, saveFocusNotice, saveNormalNotice, loadNormalNotice } from "./app.js";
 
 const container = document.getElementById('container');
 
 const form = document.getElementById('form');
+const formCard = document.getElementById('form-card');
+const content = document.getElementById('content');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -16,10 +18,27 @@ form.addEventListener('submit', async (e) => {
         await saveFocusNotice(title, desc, image, link);
         form.reset();
         alert('SUCESSO! Notícia enviada com sucesso.');
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
-})
+});
+
+formCard.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    let title = formCard['title'].value;
+    let desc = formCard['desc'].value;
+    let image = formCard['image'].value;
+    let link = formCard['link'].value;
+
+    try {
+        await saveNormalNotice(title, desc, image, link);
+        form.reset();
+        alert('SUCESSO! Notícia enviada com sucesso.');
+    } catch (error) {
+        console.log(error);
+    }
+});
 
 window.addEventListener('DOMContentLoaded', async (e) => {
     loadData((querySnapshot) => {
@@ -27,7 +46,6 @@ window.addEventListener('DOMContentLoaded', async (e) => {
 
         querySnapshot.forEach((doc) => {
             const task = doc.data();
-            console.log(task);
 
             container.innerHTML += `
     <tr>
@@ -36,6 +54,30 @@ window.addEventListener('DOMContentLoaded', async (e) => {
       <td>${task.email}</td>
       <td>${task.address}</td>
     </tr>
+            `
+        });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', async (e) => {
+    loadNormalNotice((querySnapshot) => {
+        content.innerHTML = "";
+
+        querySnapshot.forEach((doc) => {
+            const task = doc.data();
+
+            content.innerHTML += `
+            <div class="row">
+            <div class="cell" data-title="Name">
+                ${task.title}
+            </div>
+            <div class="cell" data-title="Age">
+                ${task.desc}
+            </div>
+            <div class="cell" data-title="Occupation">
+                <a href="${task.link}"></a>
+            </div>
+        </div>
             `
         });
     });

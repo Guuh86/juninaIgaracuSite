@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', async (e) => {
 
         querySnapshot.forEach((doc) => {
             const task = doc.data();
-            console.log(task);
 
             focusNotice.innerHTML += `
             <li>
