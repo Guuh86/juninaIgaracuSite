@@ -3,10 +3,13 @@
     height: 100%;
 }
 
+.swiper-pagination{
+    bottom: 0 !important;
+}
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +37,8 @@
 
 .card {
     border-radius: 25px;
+    width: 330px;
+    height: 457px;
 }
 
 .card-image {
@@ -106,6 +111,7 @@
 
 .button {
     border: none;
+    border-radius: 10px;
     font-size: 16px;
     color: #FFF;
     padding: 8px 16px;
@@ -114,6 +120,11 @@
     margin: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.footer-card{
+    position: absolute;
+    bottom: 0;
 }
 
 .button:hover {

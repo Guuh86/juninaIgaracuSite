@@ -195,10 +195,10 @@
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Reprehenderit ipsam culpa iste, cupiditate tempora, itaque nesciunt consequatur,
                                         deserunt
-                                        eaque et debitis laudantium fugiat aspernatur architecto veniam. Autem magni
-                                        natus harum?
                                     </p>
-                                    <button class="button">VER MAIS</button>
+                                    <div class="footer-card">
+                                        <button class="button">VER MAIS</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,9 @@
                                         eaque et debitis laudantium fugiat aspernatur architecto veniam. Autem magni
                                         natus harum?
                                     </p>
-                                    <button class="button">VER MAIS</button>
+                                    <div class="footer-card">
+                                        <button class="button">VER MAIS</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +246,9 @@
                                         eaque et debitis laudantium fugiat aspernatur architecto veniam. Autem magni
                                         natus harum?
                                     </p>
-                                    <button class="button">VER MAIS</button>
+                                    <div class="footer-card">
+                                        <button class="button">VER MAIS</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +271,9 @@
                                         eaque et debitis laudantium fugiat aspernatur architecto veniam. Autem magni
                                         natus harum?
                                     </p>
-                                    <button class="button">VER MAIS</button>
+                                    <div class="footer-card">
+                                        <button class="button">VER MAIS</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -290,12 +296,19 @@
                                         eaque et debitis laudantium fugiat aspernatur architecto veniam. Autem magni
                                         natus harum?
                                     </p>
-                                    <button class="button">VER MAIS</button>
+                                    &nbsp;
+                                    &nbsp;
+                                    <div class="footer-card">
+                                        <button class="button">VER MAIS</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                &nbsp;
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -398,12 +411,22 @@
 
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
+            slidesPerView: 3.2,
             spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
         });
     </script>
 </body>
