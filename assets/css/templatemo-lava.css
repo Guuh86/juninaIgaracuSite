@@ -915,6 +915,10 @@ about
   display: inline-block;
 }
 
+.theme-text{
+  font-size: 15px;
+}
+
 
 /*
 ---------------------------------------------
