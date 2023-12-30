@@ -44,7 +44,7 @@
   display: block;
 }
 .swiper-vertical > .swiper-wrapper {
-  flex-direction: column;
+  flex-direction: colum;
 }
 .swiper-wrapper {
   position: relative;

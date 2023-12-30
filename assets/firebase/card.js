@@ -10,11 +10,19 @@ window.addEventListener('DOMContentLoaded', async (e) => {
             const task = doc.data();
 
             content.innerHTML += `
-            <tr>
-            <td>${task.title}</td>
-            <td>${task.desc}</td>
-            <td><a href="${task.link}">Saiba Mais...</a></td>
-            </tr>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img class="image-card" src="${task.image}" style="width:100%">
+                        <div class="cont">
+                            <h4 class="title-card">
+                                ${task.title}
+                            </h4>
+                            <p class="desc-card">
+                                ${task.desc}
+                            </p>
+                        </div>
+                </div>
+            </div>
             `
         });
     });
