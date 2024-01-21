@@ -982,6 +982,8 @@ testimonials
   margin-top: 12px;
   width: 90px;
   height: 90px;
+  border: 3px solid #54260e;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
 }
 
 .logo-img2022 {
@@ -1009,6 +1011,7 @@ testimonials
 #testimonials .item {
   position: relative;
 }
+
 
 #testimonials .item .testimonial-content {
   background: #32e27f;
@@ -1481,3 +1484,4 @@ preloader
 .rtable--flip td:not(:last-child) {
   border-bottom: 0;
 }
+
